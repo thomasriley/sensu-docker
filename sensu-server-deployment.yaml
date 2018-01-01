@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: sensu-server
   name: sensu-server
 spec:
-  replicas: 1
+  replicas: 2
   strategy: {}
   template:
     metadata:
