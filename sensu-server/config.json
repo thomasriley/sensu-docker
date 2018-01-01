@@ -1,0 +1,12 @@
+{
+  "rabbitmq": {
+    "host": "RABBITMQHOSTNAME",
+    "vhost": "RABBITMQVHOST",
+    "user": "RABBITMQUSERNAME",
+    "password": "RABBITMQPASSWORD"
+  },
+  "redis": {
+    "host": "REDISHOSTNAME",
+    "port": 6379
+  }
+}

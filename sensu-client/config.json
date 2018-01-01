@@ -1,0 +1,8 @@
+{
+  "rabbitmq": {
+    "host": "RABBITMQHOSTNAME",
+    "vhost": "RABBITMQVHOST",
+    "user": "RABBITMQUSERNAME",
+    "password": "RABBITMQPASSWORD"
+  }
+}
