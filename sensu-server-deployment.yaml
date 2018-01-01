@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.6.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: sensu-server
+  name: sensu-server
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: sensu-server
+    spec:
+      containers:
+      - env:
+        - name: RABBITMQ_HOSTNAME
+          value: rabbitmq
+        - name: RABBITMQ_PASSWORD
+          value: sensu
+        - name: RABBITMQ_USERNAME
+          value: sensu
+        - name: RABBITMQ_VHOST
+          value: /sensu
+        - name: REDIS_HOSTNAME
+          value: redis
+        - name: REDIS_PASSWORD
+          value: redis
+        image: tomriley/sensu-server:latest
+        name: sensu-server
+        ports:
+        - containerPort: 4567
+        resources: {}
+      restartPolicy: Always
+status: {}
