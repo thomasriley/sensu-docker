@@ -7,7 +7,7 @@ services:
       - rabbitmq
     ports:
       - "4567:4567"
-    image: sensu-server:latest
+    image: tomriley/sensu-server:latest
     restart: always
     environment:
       RABBITMQ_HOSTNAME: rabbitmq
@@ -37,7 +37,7 @@ services:
       - sensu-server
     ports:
       - "3000:3000"
-    image: uchiwa:latest
+    image: tomriley/uchiwa-server:latest
     restart: always
     environment:
       SENSUENV_HOST: sensu-server
@@ -46,7 +46,7 @@ services:
   sensu-client:
     depends_on:
       - sensu-server
-    image: sensu-client:latest
+    image: tomriley/sensu-client:latest
     restart: always
     environment:
       RABBITMQ_HOSTNAME: rabbitmq

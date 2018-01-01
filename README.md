@@ -7,7 +7,7 @@ Build the images with the following commands:
 ```
 docker build -t sensu-server:latest sensu-server/.
 docker build -t sensu-client:latest sensu-client/.
-docker build -t sensu-client:latest sensu-client/.
+docker build -t uchiwa-server:latest uchiwa-server/.
 ```
 
 ## Start the environment
